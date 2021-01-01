@@ -3,6 +3,9 @@ FROM ubuntu:latest
 # Updating apt-get.
 RUN apt-get update
 
+# Installing python2.
+RUN apt-get install -y --no-install-recommends python
+
 # Installing python3.
 RUN apt-get install -y python3-pip python3-dev \
 	&& ln -s /usr/bin/python3 python \
