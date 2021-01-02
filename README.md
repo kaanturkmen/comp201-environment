@@ -21,3 +21,5 @@ Running the given command will create a ubuntu container which has following app
 3. GDB
 
 4. Vim
+
+5. Git

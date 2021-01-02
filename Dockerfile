@@ -23,3 +23,6 @@ RUN apt-get install -y --no-install-recommends gdb
 
 # Installing vim.
 RUN apt-get install -y vim
+
+# Installing git.
+RUN apt-get install -y --no-install-recommends git
