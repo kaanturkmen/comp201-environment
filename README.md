@@ -23,3 +23,5 @@ Running the given command will create a ubuntu container which has following app
 4. Vim
 
 5. Git
+
+6. Nasm
