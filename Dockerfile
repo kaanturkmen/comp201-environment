@@ -26,3 +26,6 @@ RUN apt-get install -y vim
 
 # Installing git.
 RUN apt-get install -y --no-install-recommends git
+
+# Installing nasm.
+RUN apt-get install -y --no-install-recommends nasm
