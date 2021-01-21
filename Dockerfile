@@ -29,3 +29,6 @@ RUN apt-get install -y --no-install-recommends git
 
 # Installing nasm.
 RUN apt-get install -y --no-install-recommends nasm
+
+# Installing valgrind.
+RUN apt-get install -y --no-install-recommends valgrind

@@ -5,7 +5,7 @@ This repository is created for showing how to setup COMP201 environment using Do
 2. Run the following command:
 
 ```
-docker run -it --privileged katurkmen/comp201-environment
+docker run -it --privileged kaanturkmen/comp201-environment
 ```
 
 -> If you want to copy files to your Docker container, please use docker cp command.
@@ -25,3 +25,5 @@ Running the given command will create a ubuntu container which has following app
 5. Git
 
 6. Nasm
+
+7. Valgrind
