@@ -16,10 +16,10 @@ docker run -it --privileged kaanturkmen/comp201-environment
 
 If steps are completed in a correct way, you should be seeing a screen similar to the below image.
 
-IMAGE
+![Terminal Screen](https://user-images.githubusercontent.com/63169561/107820697-424b1d00-6d8c-11eb-9932-1518084eacd0.png)
 
 P.S. You will need your docker container id in the future, easiest way to obtain it is copying the part after root@,
-for above image, docker id is e06022aa24a3.
+for above image, docker id is e47d0e6c371d.
 
 # Flags
 
@@ -47,7 +47,7 @@ Replace <FILE_PATH_IN_YOUR_LOCAL> and <YOUR_DOCKER_ID> with appropriate variable
 
 Example usage can be found below:
 ```
-docker cp ~/Desktop/main.c e06022aa24a3:/home
+docker cp ~/Desktop/main.c e47d0e6c371d:/home
 ```
 
 This will transfer the specified file / folder to the home directory of your docker container.
