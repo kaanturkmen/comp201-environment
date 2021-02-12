@@ -1,7 +1,7 @@
 # Why to Use Docker Container for COMP201?
-1. It creates a environment on your local machine and provides a root access.
-2. Once you have installed the docker container, you will no longer need internet connection to work with your COMP201 project.
-3. It is much faster to deploy and destroy since everything is in your local computer.
+1. It creates a environment on your local machine and provides you a root access.
+2. Once you have installed the docker container, you will no longer need internet connection to work with your COMP201 assignment / project.
+3. It is much faster to deploy and destroy since everything is on your local computer.
 
 **WARNING: Docker containers will not save its content if you do not either commit to your Git repository or save it your local machine. If you close and destroy it, your work will be gone. Please always commit your changes.**
 
@@ -26,8 +26,8 @@ for above image, docker id is e47d0e6c371d.
 | Flags        | Purpose        |
 | ------------- |:-------------:|
 | -i      | Keep STDIN open even if not attached. |
-| -t     | Allocate a pseudo-TTY|
-| --privileged | Gives extended privileges to the container. (i.e running setarch command)|
+| -t     | Allocate a pseudo-TTY.|
+| --privileged | Gives extended privileges to the container. (i.e running setarch command.)|
 
 # Transfering Files to the Docker Container
 
@@ -60,12 +60,12 @@ P.S. Please keep in mind that, you do not need to add a flag for recursive. (i.e
 | ------------- |:-------------:|
 | Python3 | Python 3 support. |
 | GCC / G++ / GFortran / GCC-Multilib | Enables to compile 32 bit.|
-| GDB | Debugger for C which is taughted in COMP201 Class.|
+| GDB | Debugger for C which is taughted in COMP201 class.|
 | Vim | Text editor support from the terminal. |
 | Git | Version control support on Docker Container.|
-| Nasm | Debugger for C which is taughted in COMP201 Class.|
-| Valgrind | Valgrind support on Docker Container. (i.e. finding memory leak)|
+| Nasm | Assembler and Disassembler for the Intel x86 Architecture.|
+| Valgrind | Valgrind support on Docker Container. (i.e. finding memory leak.)|
 
 # How to Contribute?
-1. If you want to add a new apps and packages to the docker image, create a pull request and let me know why it is needed.
+1. If you want to add a new application or package to the docker image, create a pull request and let me know why it is needed.
 2. If the required application or package is not available in package, and you do not know how to add to the image, create an issue.
