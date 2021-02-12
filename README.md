@@ -1,29 +1,71 @@
-This repository is created for showing how to setup COMP201 environment using Docker container.
+# Why to Use Docker Container for COMP201?
+1. It creates a environment on your local machine and provides a root access.
+2. Once you have installed the docker container, you will no longer need internet connection to work with your COMP201 project.
+3. It is much faster to deploy and destroy since everything is in your local computer.
 
-1. Install Docker.
+**WARNING: Docker containers will not save its content if you do not either commit to your Git repository or save it your local machine. If you close and destroy it, your work will be gone. Please always commit your changes.**
 
-2. Run the following command:
+# Setup
+1. [Download](https://www.docker.com) and install Docker.
+
+2. Open your shell and execute the following command:
 
 ```
 docker run -it --privileged kaanturkmen/comp201-environment
 ```
 
--> If you want to copy files to your Docker container, please use docker cp command.
+If steps are completed in a correct way, you should be seeing a screen similar to the below image.
 
-Link to docker cp command: https://docs.docker.com/engine/reference/commandline/cp/
+IMAGE
 
-Running the given command will create a ubuntu container which has following apps/packages:
+P.S. You will need your docker container id in the future, easiest way to obtain it is copying the part after root@,
+for above image, docker id is e06022aa24a3.
 
-1. Python3
+# Flags
 
-2. GCC / G++ / GFortran / GCC-Multilib (For compiling 32 bit.)
+| Flags        | Purpose        |
+| ------------- |:-------------:|
+| -i      | Keep STDIN open even if not attached. |
+| -t     | Allocate a pseudo-TTY|
+| --privileged | Gives extended privileges to the container. (i.e running setarch command)|
 
-3. GDB
+# Transfering Files to the Docker Container
 
-4. Vim
+Transfering files can be done with the [docker cp](https://docs.docker.com/engine/reference/commandline/cp/) command.
 
-5. Git
+1. Get the id of the container which you are currently working on. (If you have not obtained already) Open another terminal, run the following command, and find most recent up and running IMAGE which is named "kaanturkmen/comp201-environment". Then, copy the container id.
 
-6. Nasm
+```
+docker container ls
+```
+2. After you successfully obtained the container id, run the following command.
 
-7. Valgrind
+```
+docker cp <FILE_PATH_IN_YOUR_LOCAL> <YOUR_DOCKER_CONTAINER_ID>:/home
+```
+Replace <FILE_PATH_IN_YOUR_LOCAL> and <YOUR_DOCKER_ID> with appropriate variables.
+
+Example usage can be found below:
+```
+docker cp ~/Desktop/main.c e06022aa24a3:/home
+```
+
+This will transfer the specified file / folder to the home directory of your docker container.
+
+P.S. Please keep in mind that, you do not need to add a flag for recursive. (i.e. copying folder which is not empty.)
+
+# Available Apps and Packages
+
+| Apps / Packages        | Purpose        |
+| ------------- |:-------------:|
+| Python3 | Python 3 support. |
+| GCC / G++ / GFortran / GCC-Multilib | Enables to compile 32 bit.|
+| GDB | Debugger for C which is taughted in COMP201 Class.|
+| Vim | Text editor support from the terminal. |
+| Git | Version control support on Docker Container.|
+| Nasm | Debugger for C which is taughted in COMP201 Class.|
+| Valgrind | Valgrind support on Docker Container. (i.e. finding memory leak)|
+
+# How to Contribute?
+1. If you want to add a new apps and packages to the docker image, create a pull request and let me know why it is needed.
+2. If the required application or package is not available in package, and you do not know how to add to the image, create an issue.
