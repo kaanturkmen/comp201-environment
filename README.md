@@ -27,7 +27,7 @@ for above image, docker id is e47d0e6c371d.
 | ------------- |:-------------:|
 | -i      | Keep STDIN open even if not attached. |
 | -t     | Allocate a pseudo-TTY.|
-| --privileged | Gives extended privileges to the container. (i.e running setarch command.)|
+| --privileged | Gives extended privileges to the container. (i.e. running setarch command.)|
 
 # Transfering Files to the Docker Container
 
@@ -68,4 +68,4 @@ P.S. Please keep in mind that, you do not need to add a flag for recursive. (i.e
 
 # How to Contribute?
 1. If you want to add a new application or package to the docker image, create a pull request and let me know why it is needed.
-2. If the required application or package is not available in package, and you do not know how to add to the image, create an issue.
+2. If the required application or package is not available in the docker image, and you do not know how to add to it, create an issue.
